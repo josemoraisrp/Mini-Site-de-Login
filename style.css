@@ -10,7 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* Card */
@@ -93,6 +94,17 @@ button:active {
 @media (max-width: 600px) {
     .container {
         padding: 20px;
+    }
+}
+
+@media(max-width: 600px) {
+    body {
+        align-items:flex-start;
+        padding-top: 60px;
+    }
+    .container {
+        width: 100%;
+        max-width: 320px;
     }
 }
 
