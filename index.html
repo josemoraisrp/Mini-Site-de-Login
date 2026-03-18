@@ -17,7 +17,25 @@
     <p id="mensagem"></p>
 </div>
 
+<!-- 🔥 AGORA FORA -->
+<div id="dashboard" style="display: none;">
+
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <button onclick="mostrar('home')">🏠 Início</button>
+        <button onclick="mostrar('perfil')">👤 Perfil</button>
+        <button onclick="mostrar('config')">⚙️ Config</button>
+        <button onclick="logout()">🚪 Sair</button>
+    </div>
+
+    <div class="conteudo">
+        <div id="home" class="pagina ativa">Bem-vindo ao sistema 👋</div>
+<div id="perfil" class="pagina">Seu perfil 👤</div>
+<div id="config" class="pagina">Configurações ⚙️</div>
+    </div>
+
+</div>
+
 <script src="script.js"></script>
 
 </body>
-</html>
