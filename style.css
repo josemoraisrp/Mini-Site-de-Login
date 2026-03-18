@@ -1,63 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: #0f172a;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
 }
 
+/* Card */
 .container {
-    background: #1e293b;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    animation: fadeIn 0.6s ease;
 }
 
+/* Título */
+h2 {
+    margin-bottom: 20px;
+    color: #e2e8f0;
+}
+
+/* Input */
 input {
-    width: 90%;
-    padding: 10px;
-    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
     border: none;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #0f172a;
+    color: white;
     outline: none;
+    transition: 0.3s;
 }
 
+input:focus {
+    border: 1px solid #22c55e;
+}
+
+/* Botão */
 button {
-    margin-top: 15px;
-    padding: 10px;
     width: 100%;
-    background: #22c55e;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(34,197,94,0.4);
 }
 
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mensagem */
 #mensagem {
     margin-top: 15px;
     font-weight: bold;
 }
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
         padding: 20px;
-    }
-
-    input {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
     }
 }
