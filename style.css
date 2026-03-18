@@ -46,3 +46,17 @@ button:hover {
     margin-top: 15px;
     font-weight: bold;
 }
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
